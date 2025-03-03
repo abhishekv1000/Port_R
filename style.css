@@ -10,6 +10,91 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.portfolio .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.portfolio-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-box:hover .portfolio-img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer {
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.portfolio-box a:hover {
+    background-color: #007bff;
+}
 
 :root {
     --bg-color: #0a0c12; /* Darker background for better contrast */
@@ -77,6 +162,41 @@ section {
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
+}
+/* Remove hover effect from the portfolio images */
+.portfolio-box .portfolio-img {
+    transition: none;
+}
+
+/* Adjust the position of the "View Project" button */
+.portfolio-box .btn {
+    display: inline-block;
+    margin-top: 15px; /* Adds space below the project description */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Style the "See More Projects" button */
+.more-projects-btn.white {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+}
+
+.more-projects-btn.white:hover {
+    background-color: #007bff;
+    color: white;
 }
 
 /* Home Section */
